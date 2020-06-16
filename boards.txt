@@ -584,7 +584,7 @@ kmpcil_nrf52840.build.core=nRF5
 kmpcil_nrf52840.build.variant=kmpcil_nrf52840
 kmpcil_nrf52840.build.usb_manufacturer="KMPCIL"
 kmpcil_nrf52840.build.usb_product="KMPCIL NRF52840"
-kmpcil_nrf52840.build.extra_flags=-DNRF52840_XXAA {build.flags.usb}
+kmpcil_nrf52840.build.extra_flags=-DSPI_HAS_TRANSFER_BUF=1 -DNRF52840_XXAA {build.flags.usb}
 kmpcil_nrf52840.build.ldscript=nrf52840_s140_v6.ld
 kmpcil_nrf52840.build.vid=0x239A
 kmpcil_nrf52840.build.pid=0x8029

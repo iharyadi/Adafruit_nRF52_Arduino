@@ -91,22 +91,14 @@ static const uint8_t D18 = PIN_D18;
 static const uint8_t D19 = PIN_D19;
 static const uint8_t D20 = PIN_D20;
 
-// LEDs
-#define LEDS_NUMBER    1
-#define LED_STATE_ON   1
-
-#define BOARD_RGB_BRIGHTNESS 0x202020
-
-#define PIN_LED1             (7)
+#define PIN_LED1             (39)
 #define LED_BUILTIN          PIN_LED1
 #define LED_CONN             PIN_LED1
 
 #define LED_RED              PIN_LED1
 #define LED_BLUE             PIN_LED1
 
-static const uint8_t LED_RGB_RED   = (22);
-static const uint8_t LED_RGB_GREEN = (23);
-static const uint8_t LED_RGB_BLUE  = (24);
+#define LED_STATE_ON   1
 
 // Buttons
 #define BUTTONS_NUMBER 2
@@ -115,14 +107,6 @@ static const uint8_t LED_RGB_BLUE  = (24);
 #define BUTTON_PULL    NRF_GPIO_PIN_PULLUP
 
 static const uint8_t BUTTON_MODE =  BUTTON_DFU;
-
-// Antenna
-#define ANTENNA_SWITCH_1            (25)
-#define ANTENNA_SWITCH_2            (26)
-
-// NFC
-#define NFC1                        (27)
-#define NFC2                        (28)
 
 /*
  * Analog pins
@@ -149,38 +133,20 @@ static const uint8_t A7 = PIN_A7;
 
 // Other pins
 #define PIN_AREF           PIN_A7
-#define PIN_VBAT           PIN_A6
-#define PIN_PWR            (37)
-#define PIN_CHG            (38)
-
 static const uint8_t AREF = PIN_AREF;
 
 /*
  * Serial interfaces
  */
-#define PIN_SERIAL1_RX         9
-#define PIN_SERIAL1_TX         10
-#define PIN_SERIAL1_CTS        4
-#define PIN_SERIAL1_RTS        3
-#define PIN_SERIAL2_RX         5
-#define PIN_SERIAL2_TX         4
-#define PIN_SERIAL2_CTS        6
-#define PIN_SERIAL2_RTS        8
+#define PIN_SERIAL1_RX         17
+#define PIN_SERIAL1_TX         12
+#define PIN_SERIAL1_CTS        43
+#define PIN_SERIAL1_RTS        32
 
 /*
  * SPI Interfaces
  */
 #define SPI_INTERFACES_COUNT 2
-
-/*#define PIN_SPI_SS                  14
-#define PIN_SPI_MISO                11
-#define PIN_SPI_MOSI                12
-#define PIN_SPI_SCK                 13
-    
-#define PIN_SPI_SS                  24
-#define PIN_SPI_MISO                41
-#define PIN_SPI_MOSI                40
-#define PIN_SPI_SCK                 42*/
     
 #define PIN_SPI_SS                  9
 #define PIN_SPI_MISO                15
@@ -201,20 +167,10 @@ static const uint8_t SCK1  = PIN_SPI1_SCK;
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 2
+#define WIRE_INTERFACES_COUNT 1
 
 #define PIN_WIRE_SDA               0
 #define PIN_WIRE_SCL               1
-#define PIN_WIRE1_SDA              2
-#define PIN_WIRE1_SCL              3
-
-// On-board QSPI Flash
-#define EXTERNAL_FLASH_DEVICES   MX25L3233F
-
-#define USB_MSC_BLOCK_SIZE    512
-#define USB_MSC_BLOCK_COUNT   ((2*1024*1024) / USB_MSC_BLOCK_SIZE)
-
-#define EXTERNAL_FLASH_USE_QSPI
 
 #ifdef __cplusplus
 }

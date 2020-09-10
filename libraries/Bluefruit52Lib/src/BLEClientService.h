@@ -57,6 +57,8 @@ class BLEClientService
     BLEClientService(void);
     BLEClientService(BLEUuid bleuuid);
 
+    ~BLEClientService();
+
     virtual bool     begin(void);
 
     virtual bool     discover  (uint16_t conn_handle);

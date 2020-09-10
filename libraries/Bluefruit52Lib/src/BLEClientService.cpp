@@ -59,6 +59,10 @@ BLEClientService::BLEClientService(BLEUuid bleuuid)
   _init();
 }
 
+BLEClientService::~BLEClientService()
+{
+  (void) Bluefruit.Gatt._removeService(this);
+}
 
 bool BLEClientService::begin(void)
 {

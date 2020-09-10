@@ -584,8 +584,8 @@ kmpcil_nrf52840.build.core=nRF5
 kmpcil_nrf52840.build.variant=kmpcil_nrf52840
 kmpcil_nrf52840.build.usb_manufacturer="KMPCIL"
 kmpcil_nrf52840.build.usb_product="KMPCIL NRF52840"
-kmpcil_nrf52840.build.extra_flags=-DSPI_HAS_TRANSFER_BUF=1 -DNRF52840_XXAA {build.flags.usb}
-kmpcil_nrf52840.build.ldscript=nrf52840_s140_v6.ld
+kmpcil_nrf52840.build.extra_flags=-DCFG_BLE_TX_POWER_LEVEL=8 -DSPI_HAS_TRANSFER_BUF=1 -DNRF52840_XXAA {build.flags.usb}
+kmpcil_nrf52840.build.ldscript=nrf52840_s140_v7.ld
 kmpcil_nrf52840.build.vid=0x239A
 kmpcil_nrf52840.build.pid=0x8029
 
@@ -594,6 +594,11 @@ kmpcil_nrf52840.menu.softdevice.s140v6=0.2.11 SoftDevice s140 6.1.1
 kmpcil_nrf52840.menu.softdevice.s140v6.build.sd_name=s140
 kmpcil_nrf52840.menu.softdevice.s140v6.build.sd_version=6.1.1
 kmpcil_nrf52840.menu.softdevice.s140v6.build.sd_fwid=0x00B6
+
+kmpcil_nrf52840.menu.softdevice.s140v7=0.2.11 SoftDevice s140 7.2.0
+kmpcil_nrf52840.menu.softdevice.s140v7.build.sd_name=s140
+kmpcil_nrf52840.menu.softdevice.s140v7.build.sd_version=7.2.0
+kmpcil_nrf52840.menu.softdevice.s140v7.build.sd_fwid=0x0100
 
 # Debug Menu
 kmpcil_nrf52840.menu.debug.l0=Level 0 (Release)

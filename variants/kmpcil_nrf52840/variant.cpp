@@ -82,12 +82,9 @@ const uint32_t g_ADigitalPinMap[] =
   _PINNUM(0, 17),  // P0.17 
   _PINNUM(0, 20),  // P0.20 
   _PINNUM(0, 22),  // P0.22 
-  _PINNUM(0, 2),   // P0.02
 };
 
 void initVariant()
 {
-  // LED1
-  pinMode(PIN_LED1, OUTPUT);
-  ledOff(PIN_LED1);
+ 
 }

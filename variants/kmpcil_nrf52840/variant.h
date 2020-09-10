@@ -68,6 +68,8 @@ extern "C"
 #define PIN_D18             (18)
 #define PIN_D19             (19)
 #define PIN_D20             (20)
+#define PIN_D36             (36)
+
 
 static const uint8_t D0  = PIN_D0 ;
 static const uint8_t D1  = PIN_D1 ;
@@ -90,20 +92,21 @@ static const uint8_t D17 = PIN_D17;
 static const uint8_t D18 = PIN_D18;
 static const uint8_t D19 = PIN_D19;
 static const uint8_t D20 = PIN_D20;
+static const uint8_t D36 = PIN_D36;
 
-#define PIN_LED1             (39)
-#define LED_BUILTIN          PIN_LED1
-#define LED_CONN             PIN_LED1
+//#define PIN_LED1             (39)
+//#define LED_BUILTIN          PIN_LED1
+//#define LED_CONN             PIN_LED1
 
-#define LED_RED              PIN_LED1
-#define LED_BLUE             PIN_LED1
+//#define LED_RED              PIN_LED1
+//#define LED_BLUE             PIN_LED1
 
 #define LED_STATE_ON   1
 
 // Buttons
 #define BUTTONS_NUMBER 2
-#define BUTTON_DFU                  (20)
-#define BUTTON_FRESET               (19) // A0
+#define BUTTON_DFU                  (6)
+#define BUTTON_FRESET               (5) // A0
 #define BUTTON_PULL    NRF_GPIO_PIN_PULLUP
 
 static const uint8_t BUTTON_MODE =  BUTTON_DFU;
@@ -138,8 +141,8 @@ static const uint8_t AREF = PIN_AREF;
 /*
  * Serial interfaces
  */
-#define PIN_SERIAL1_RX         17
-#define PIN_SERIAL1_TX         12
+#define PIN_SERIAL1_RX         18
+#define PIN_SERIAL1_TX         10
 #define PIN_SERIAL1_CTS        43
 #define PIN_SERIAL1_RTS        32
 
@@ -147,7 +150,8 @@ static const uint8_t AREF = PIN_AREF;
  * SPI Interfaces
  */
 #define SPI_INTERFACES_COUNT 2
-    
+ 
+#define PIN_SPI_SS_USB              17   
 #define PIN_SPI_SS                  9
 #define PIN_SPI_MISO                15
 #define PIN_SPI_MOSI                16

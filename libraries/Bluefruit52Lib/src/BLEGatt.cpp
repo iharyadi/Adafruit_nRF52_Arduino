@@ -270,6 +270,27 @@ void BLEGatt::_removeCharacteristic(BLEClientCharacteristic* chr)
   }
 }
 
+bool BLEGatt::_removeService(BLEClientService* svc)
+{
+  for(int i=0; i<_client.svc_count; i++)
+  {
+    // found the char, swap with the last one
+    if ( _client.svc_list[i] == svc )
+    {
+      vTaskSuspendAll();
+
+      _client.svc_count--;
+
+      _client.svc_list[i] = _client.svc_list[ _client.svc_count ];
+      _client.svc_list[_client.svc_count] = NULL;
+
+      ( void ) xTaskResumeAll();
+
+      break;
+    }
+  }
+}
+
 bool BLEGatt::_addCharacteristic(BLEClientCharacteristic* chr)
 {
   VERIFY( _client.chr_count < CFG_GATT_MAX_CLIENT_CHARS );
